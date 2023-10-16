@@ -13,7 +13,7 @@ namespace ChipsMovieLogz.Controllers
         {
             _logger = logger;
         }
-        [HttpGet("diagnosis", Name = "GetActivityHistory")]
+        [HttpGet("movies", Name = "GetMovie")]
         public IEnumerable<Models.Movie> Get(string? title, string? genre, DateTime releaseDate, string? about, int imdbRating, int motionPictureRating, int metaScore, string? director, string? writer, int runtime, string? topCast)
         {
             var returnData = new RetrieveMovies("DataSource");
@@ -21,7 +21,7 @@ namespace ChipsMovieLogz.Controllers
             return syncedItemHistory;
         }
 
-    }
 
     }
+
 }
